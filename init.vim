@@ -1,13 +1,15 @@
 call plug#begin("~/.vim/plugged")
+
   " Theme
 	Plug 'morhetz/gruvbox'
+
   " Language Client
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+
   " TypeScript Highlighting
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
-
 
   " File Explorer with 
   Plug 'scrooloose/nerdtree'
@@ -26,12 +28,23 @@ call plug#begin("~/.vim/plugged")
 
 	"StatusLine
 	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+
+	"Git
+	Plug 'tpope/vim-fugitive'
+	Plug 'airblade/vim-gitgutter'
+
+	"Indent line
+	Plug 'Yggdroot/indentLine'
+
+	"Svelte Highlight
+	Plug 'evanleck/vim-svelte'
 
   call plug#end()
 
 "PowerLine fonts for airline
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='minimalist'
 
 " TextEdit might fail if hidden is not set.
 set hidden
